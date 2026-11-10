@@ -1,0 +1,17 @@
+/build/
+/dist/
+/private/
+*.pem
+*.key
+*.crx
+*.so
+*.log
+*.md5
+*.mp4
+*.webm
+*.zip
+*.tar*
+__pycache__/
+.venv/
+.DS_Store
+Thumbs.db

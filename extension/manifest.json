@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube codecs for Qualcomm Venus",
+  "version": "1.1.0",
+  "description": "Exclude AV1 on YouTube so Qualcomm Venus can decode VP9 or H.264.",
+  "minimum_chrome_version": "111",
+  "content_scripts": [{
+    "matches": ["https://www.youtube.com/*", "https://m.youtube.com/*", "https://www.youtube-nocookie.com/*"],
+    "js": ["codec.js"],
+    "run_at": "document_start",
+    "world": "MAIN",
+    "all_frames": true
+  }]
+}

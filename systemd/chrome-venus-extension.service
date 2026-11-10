@@ -1,0 +1,16 @@
+[Unit]
+Description=Local Chrome Venus codec extension updates
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /usr/local/share/chrome-venus/extension-server.py
+DynamicUser=yes
+NoNewPrivileges=yes
+ProtectSystem=strict
+ProtectHome=yes
+PrivateTmp=yes
+RestrictAddressFamilies=AF_INET
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
